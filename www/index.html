@@ -6,21 +6,21 @@
         <title>Blank App</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
-    <body >
+    <body onload="init()">
         <script type="text/javascript" src="cordova.js"></script>
-		<script type="text/javascript" src="www/js/pouchdb-7.0.0.min.js"></script>
-		<script type="text/javascript" src="www/js/script.js"></script>
+		<script type="text/javascript" src="js/pouchdb-7.0.0.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
 		
 		<form name="input">
 			Full Name: <input type="text" name="full_name" id="full_name"/> <br/>
 			Phone Number: <input type="text" name="phone_num" id="phone_num"/> <br/>
 			<input type="hidden" name="business" id="business" value="no" />
-			<input type="button" value="Submit" onClick="addContact()"/>
-
+			<input type="button" value="Add Contact" id="addcontact_button"/>     
+			
 			<input type="reset" value="Reset"/>
 		</form>
 		
-		<button type="button" value="List Contacts" onClick="showTodos()">List Contacts</button>
+		<input type="button" value="List Contacts" id="listcontacts_button"/>   
 		<br/>
 		<br/>
 		<div id="contact_list">
