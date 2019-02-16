@@ -14,7 +14,7 @@ function init()
 			
 function onDeviceReady() {
   db = new PouchDB("contact_db");
-  
+  alert ("Device is ready!!");
 }
 
 
@@ -24,7 +24,7 @@ function addContact()
   var full_name=document.getElementById("full_name").value;
   var phone_num=document.getElementById("phone_num").value;
   var business=document.getElementById("business").value;
-  alert ("Variables declared!!");
+  
   
   var contact = {
     _id: new Date().toISOString(),
@@ -32,7 +32,7 @@ function addContact()
 	phone: phone_num,
     business_contact: business
   };
-  alert ("Contact Created");
+  
   db.put(contact, function callback(err, result) {
     if (!err) {
       console.log('Successfully saved a contact!');
