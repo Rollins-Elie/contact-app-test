@@ -1,4 +1,4 @@
-var db = new PouchDB('contact_db');
+var db;
 
 function init() 
 {
@@ -7,8 +7,15 @@ function init()
 	
 	var listContactsButton = document.getElementById("listcontacts_button");
 	listContactsButton.addEventListener("touchstart", showTodos, false);
+	
+	document.addEventListener("deviceready", onDeviceReady, false);
 }
 			
+function onDeviceReady() {
+  db = new PouchDB("contact_db");
+  
+}
+
 
 function addContact() 
 {
