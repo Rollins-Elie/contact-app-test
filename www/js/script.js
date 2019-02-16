@@ -12,7 +12,7 @@ function init()
 
 function addContact() 
 {
-  
+  alert ("In add contact!!");
   var full_name=document.getElementById("full_name").value;
   var phone_num=document.getElementById("phone_num").value;
   var business=document.getElementById("business").value;
