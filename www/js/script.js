@@ -1,4 +1,5 @@
 var db;
+document.addEventListener("deviceready", onDeviceReady, false);
 
 function init() 
 {
@@ -8,7 +9,7 @@ function init()
 	var listContactsButton = document.getElementById("listcontacts_button");
 	listContactsButton.addEventListener("touchstart", showTodos, false);
 	
-	document.addEventListener("deviceready", onDeviceReady, false);
+	
 }
 			
 function onDeviceReady() {
