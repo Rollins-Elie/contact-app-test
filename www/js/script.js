@@ -9,11 +9,13 @@ function init()
 	var listContactsButton = document.getElementById("listcontacts_button");
 	listContactsButton.addEventListener("touchstart", showTodos, false);
 	
+	db = new PouchDB("contact_db");
+	alert ("DB created!!");
 	
 }
 			
 function onDeviceReady() {
-  db = new PouchDB("contact_db");
+  
   alert ("Device is ready!!");
 }
 
